@@ -5,7 +5,7 @@ const InventoryList = (props) => {
     return(
       <div>
         <ul>
-          {props.items.map(item => <li>Description: {item.description} <br> Quantity: item.quantity}</li>)}
+          {props.inventoryItems.map(item => <li>item: {item.description}, quantity: {item.quantity}</li>)}
         </ul>
       </div>
     )

@@ -13,9 +13,9 @@ describe('actions', () => {
   it('should create an action to add a new inventory item', () => {
     const newItem = {quantity: '2 quarts', description: 'milk'}
     const expectedAction = {
-      type: 'ADD_INVENTORY_LIST_ITEM', 
+      type: 'ADD_INVENTORY_LIST_ITEM',
       payload: newItem
     }
-    expect(actions.addInventoryListItem('2 quarts', 'milk')).toEqual(expectedAction)
+    expect(actions.addInventoryListItems('2 quarts', 'milk')).toEqual(expectedAction)
   })
 })

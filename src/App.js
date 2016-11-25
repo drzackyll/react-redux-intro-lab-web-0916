@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import addInventoryListItems from './actions/addInventoryListItemsActions';
-import getInventoryListItems from './actions/inventoryItemsActions';
+import {addInventoryListItems} from './actions/inventoryItemsActions';
+import {getInventoryListItems} from './actions/inventoryItemsActions';
 import InventoryList from './InventoryList'
 import NewInventoryItem from './NewInventoryItem'
 
+
 class App extends Component {
+  componentWillMount() {
+    getInventoryListItems()
+  }
 
   render() {
     return (
@@ -14,7 +18,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Flatiron Bakery</h2>
           <div>
-            <InventoryList items={this.props.inventoryItems}/>
+            <InventoryList inventoryItems={this.props.inventoryItems}/>
             <NewInventoryItem />
           </div>
         </div>

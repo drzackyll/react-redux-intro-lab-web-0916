@@ -3,9 +3,8 @@ export default function inventoryItemsReducer(state = [], action) {
     case 'GET_INVENTORY_LIST_ITEMS':
       return action.payload
     case 'ADD_INVENTORY_LIST_ITEM':
-      return [...items, action.payload]
+      return [...state, action.payload]
     default:
       return state
-
   }
 }
